@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversor de Temperatura</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <form action="/idade_pet" method="post">
+
+        <h1>DESCUBRA A IDADE DE SEU PET</h1>
+
+        <label>Digite o ano de nascimento: </label>
+        <input type="number" id="ano" name="ano" step="0.01" required>
+
+
+        <button type="submit">Calcular Idade</button>
+
+    </form>
+
+    {% if idade%}
+        <div class="resultado">
+            <h2>A idade do seu pet é:</h2>
+            <p>{{ idade }} anos</p>
+        </div>
+    {%endif%}
+
+</div>
+
+</body>
+</html>
